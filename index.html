@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Market Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark">
+
+  <header class="top-bar">
+    <h1>Stock Market Dashboard</h1>
+    <button id="themeToggle">🌙 Dark</button>
+  </header>
+
+  <p class="author">Built by Saam</p>
+
+  <div class="search-box">
+    <input
+      id="searchInput"
+      placeholder="Search stock (AAPL, TSLA)"
+      autocomplete="off"
+    />
+    <button id="searchBtn">Search</button>
+    <div id="suggestions"></div>
+  </div>
+
+  <div id="loader">Loading...</div>
+
+  <div class="dashboard">
+    <div class="chart-section">
+      <div class="range-buttons">
+        <button data-range="30">1M</button>
+        <button data-range="90">3M</button>
+        <button data-range="180">6M</button>
+        <button data-range="365">1Y</button>
+      </div>
+      <div id="chart"></div>
+    </div>
+
+    <div class="info-section">
+      <h2 id="stock-name">—</h2>
+
+      <div class="stat"><span>Price</span><strong id="stock-price">—</strong></div>
+      <div class="stat"><span>Change</span><strong id="stock-change">—</strong></div>
+      <hr />
+      <div class="stat"><span>Open</span><strong id="stock-open">—</strong></div>
+      <div class="stat"><span>High</span><strong id="stock-high">—</strong></div>
+      <div class="stat"><span>Low</span><strong id="stock-low">—</strong></div>
+      <div class="stat"><span>Volume</span><strong id="stock-volume">—</strong></div>
+    </div>
+  </div>
+
+  <footer>© 2025 · Built by Saam</footer>
+
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
